@@ -343,3 +343,4 @@ translate/generated
 
 # Resource files (UTF-16 encoded)
 *.rc
+!AudioPlaybackConnector-new.rc

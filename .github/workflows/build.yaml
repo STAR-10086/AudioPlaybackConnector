@@ -32,4 +32,3 @@ jobs:
         name: ${{ github.ref_name }}
         draft: true
         files: x64/Release/AudioPlaybackConnector-new.exe
-        rename: AudioPlaybackConnector.exe

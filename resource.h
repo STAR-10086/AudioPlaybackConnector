@@ -1,18 +1,11 @@
-//{{NO_DEPENDENCIES}}
-// Microsoft Visual C++ generated include file.
-// Used by AudioPlaybackConnector.rc
-//
-#define IDI_AUDIOPLAYBACKCONNECTOR      1
-#define IDC_STATIC                      -1
-
-// Next default values for new objects
-// 
-#ifdef APSTUDIO_INVOKED
-#ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NO_MFC                     1
-#define _APS_NEXT_RESOURCE_VALUE        129
-#define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1000
-#define _APS_NEXT_SYMED_VALUE           100
-#endif
-#endif
+#define IDI_ICON1                       101
+#define IDS_APP_TITLE                   102
+#define IDS_APP_DESCRIPTION             103
+#define IDS_APP_TITLE_ZH               104
+#define IDS_APP_DESCRIPTION_ZH         105
+#define IDM_EXIT                        1001
+#define IDM_SETTINGS                    1002
+#define IDM_ABOUT                       1003
+#define IDM_LANGUAGE_ZH                 1004
+#define IDM_LANGUAGE_EN                 1005
+#define IDM_AUTO_RECONNECT              1006

@@ -16,19 +16,20 @@ jobs:
     - uses: nuget/setup-nuget@v1
       with:
         nuget-version: latest
-    - run: |
-        Start-Job -Init ([ScriptBlock]::Create("Set-Location '$pwd'")) -Script {
-          msbuild "-p:Configuration=Release;Platform=x64;Restore=true" }
-        Get-Job | Wait-Job | Receive-Job
+    - name: Build
+      run: msbuild "AudioPlaybackConnector-new.vcxproj" "-p:Configuration=Release;Platform=x64;Restore=true"
+      shell: powershell
+    - name: List files
+      run: dir -Recurse | Select-String "AudioPlaybackConnector-new.exe"
       shell: powershell
     - uses: actions/upload-artifact@v4
       with:
         name: AudioPlaybackConnector
-        path: x64/Release/AudioPlaybackConnector-new.exe
+        path: "**/AudioPlaybackConnector-new.exe"
     - name: Create Release
       uses: softprops/action-gh-release@v2
       with:
         tag_name: ${{ github.ref_name }}
         name: ${{ github.ref_name }}
-        draft: true
-        files: x64/Release/AudioPlaybackConnector-new.exe
+        draft: false
+        files: "**/AudioPlaybackConnector-new.exe"

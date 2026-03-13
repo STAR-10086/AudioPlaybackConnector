@@ -340,3 +340,6 @@ ASALocalRun/
 healthchecksdb
 
 translate/generated
+
+# Resource files (UTF-16 encoded)
+*.rc
